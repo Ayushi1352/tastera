@@ -1,0 +1,400 @@
+{
+  "common": {
+    "theme": {
+      "fonts": {
+        "primary": "var(--font-roboto)",
+        "heading": "var(--font-montserrat)",
+        "display": "var(--font-playfair)",
+        "accent": "var(--font-outfit)",
+        "nav": "var(--font-lato)"
+      }
+    },
+    "metadata": {
+      "title": "Tastera | Restaurant & Dining",
+      "description": "Delicious food and memorable dining at Tastera, a multi-cuisine restaurant. Freshly prepared dishes, warm ambiance and exceptional service. Book your table today.",
+      "icon": "/images/favicon.png",
+      "lang": "en"
+    },
+    "company": {
+      "name": "Tastera",
+      "logo": "/images/tastera-logo-dark.webp",
+      "logoLight": "/images/tastera-logo-white.webp",
+      "logoAlt": "Tastera — Restaurant & Dining",
+      "logoWidth": 323,
+      "logoHeight": 162,
+      "contactItems": [
+        {
+          "id": "visit-us",
+          "icon": "LuMapPin",
+          "title": "Visit Us",
+          "lines": ["123 Main Street,", "New York, NY 10001, USA"],
+          "url": "https://www.google.com/maps/search/?api=1&query=123+Main+Street+New+York+NY+10001+USA"
+        },
+        {
+          "id": "call-us",
+          "icon": "LuPhoneCall",
+          "title": "Call Us",
+          "lines": ["+1 0000000000"],
+          "url": "tel:+10000000000"
+        },
+        {
+          "id": "email-us",
+          "icon": "LuMail",
+          "title": "Email Us",
+          "lines": ["info@xyz.com"],
+          "url": "mailto:info@xyz.com"
+        }
+      ]
+    },
+    "Footer": {
+      "description": "A perfect blend of great food, warm hospitality, and a memorable dining experience.",
+      "quickLinksTitle": "Quick Links",
+      "quickLinks": [
+        { "id": "home", "label": "Home", "url": "#home" },
+        { "id": "about", "label": "About Us", "url": "#about" },
+        { "id": "services", "label": "Services", "url": "#menus" },
+        { "id": "gallery", "label": "Gallery", "url": "#gallery" }
+      ],
+      "usefulLinksTitle": "Useful Links",
+      "usefulLinks": [
+        { "id": "why-us", "label": "Why Choose Us", "url": "#why-us" },
+        { "id": "testimonials", "label": "Testimonials", "url": "#testimonials" },
+        { "id": "faq", "label": "FAQs", "url": "#faq" },
+        { "id": "contact", "label": "Contact Us", "url": "#contact" }
+      ],
+      "contactTitle": "Get in Touch",
+      "contactIds": ["visit-us", "call-us", "email-us"],
+      "socialTitle": "Follow Us",
+      "socialLinks": [
+        { "id": "facebook", "icon": "FaFacebookF", "label": "Facebook", "url": "https://www.facebook.com/" },
+        { "id": "instagram", "icon": "FaInstagram", "label": "Instagram", "url": "https://www.instagram.com/" },
+        { "id": "youtube", "icon": "FaYoutube", "label": "YouTube", "url": "https://www.youtube.com/" },
+        { "id": "linkedin", "icon": "FaLinkedinIn", "label": "LinkedIn", "url": "https://www.linkedin.com/" }
+      ],
+      "copyrightText": "© {year} TASTERA Restaurant & Dining. All Rights Reserved. Powered by Lestow."
+    }
+  },
+  "categories": {
+    "Restaurant": {
+      "sections": {
+        "Header": {
+          "variants": {
+            "RestaurantHeader1": {
+              "logoUrl": "/",
+              "homeLabel": "Tastera — back to top",
+              "navLinks": [
+                { "id": "home", "label": "Home", "url": "#home" },
+                { "id": "about", "label": "About us", "url": "#about" },
+                { "id": "menus", "label": "Our Menus", "url": "#menus" },
+                { "id": "why-us", "label": "Why Choose Us", "url": "#why-us" },
+                { "id": "gallery", "label": "Gallery", "url": "#gallery" },
+                { "id": "testimonials", "label": "Testimonials", "url": "#testimonials" },
+                { "id": "faq", "label": "Faq", "url": "#faq" },
+                { "id": "contact", "label": "Contact US", "url": "#contact" }
+              ],
+              "buttonText": "Book a Table",
+              "buttonIcon": "LuUtensils",
+              "buttonUrl": "#reservation",
+              "mainNavLabel": "Main menu",
+              "mobileNavLabel": "Mobile menu",
+              "openMenuLabel": "Open menu",
+              "closeMenuLabel": "Close menu"
+            }
+          }
+        },
+        "Hero": {
+          "variants": {
+            "RestaurantHero1": {
+              "id": "home",
+              "kicker": "Delicious Food &",
+              "titleTop": "Memorable",
+              "titleAccent": "Dining",
+              "subtitle": "Multi-Cuisine Restaurant",
+              "buttonText": "Book a Table",
+              "buttonUrl": "#reservation",
+              "image": "/images/hero-food.webp",
+              "imageAlt": "Sliced grilled chicken breast with roasted vegetables, cherry tomatoes and a dip on a black plate"
+            }
+          }
+        },
+        "About": {
+          "variants": {
+            "RestaurantAbout1": {
+              "id": "about",
+              "label": "About Us",
+              "titleTop": "Delicious Food for a",
+              "titleAccent": "Healthy Life",
+              "description": "At TASTERA, we believe great food brings people together. We serve fresh, high-quality ingredients crafted into flavorful dishes, creating a dining experience that’s both delicious and wholesome.",
+              "features": [
+                {
+                  "id": "quality-food",
+                  "icon": { "src": "/images/icon-chef-tools.webp", "width": 106, "height": 108 },
+                  "title": "Quality Food",
+                  "text": "We use fresh, high-quality ingredients to serve delicious and wholesome meals."
+                },
+                {
+                  "id": "sustainable-sourcing",
+                  "icon": { "src": "/images/icon-leaf.webp", "width": 110, "height": 88 },
+                  "title": "Sustainable Sourcing",
+                  "text": "We responsibly source our ingredients to ensure freshness, taste, and long-term quality."
+                }
+              ],
+              "image": "/images/about-food.webp",
+              "imageAlt": "Grilled steak with rosemary, roasted potatoes, cherry tomatoes and broccoli",
+              "decoImage": { "src": "/images/deco-hat-about.webp", "width": 168, "height": 270 }
+            }
+          }
+        },
+        "Menus": {
+          "variants": {
+            "RestaurantMenus1": {
+              "id": "menus",
+              "label": "Our Menus",
+              "titleTop": "Explore Our",
+              "titleAccent": "Delicious Menus",
+              "description": "A tempting selection of freshly prepared dishes, crafted with quality ingredients\nto satisfy every taste.",
+              "items": [
+                {
+                  "id": "grilled-chicken-skewers",
+                  "title": "Grilled Chicken Skewers",
+                  "text": "Tender chicken pieces marinated in aromatic spices and grilled to perfection.",
+                  "image": "/images/menu-chicken.webp",
+                  "imageAlt": "Grilled chicken skewers with lettuce and a dip"
+                },
+                {
+                  "id": "creamy-penne-pasta",
+                  "title": "Creamy Penne Pasta",
+                  "text": "Rich and flavorful pasta tossed in a creamy, house-made sauce.",
+                  "image": "/images/menu-pasta.webp",
+                  "imageAlt": "Creamy penne pasta topped with parmesan and herbs"
+                },
+                {
+                  "id": "classic-veg-burger",
+                  "title": "Classic Veg Burger",
+                  "text": "A wholesome, flavorful burger with fresh vegetables and signature sauce.",
+                  "image": "/images/menu-burger.webp",
+                  "imageAlt": "Classic burger with cheese, tomato and lettuce, served with fries"
+                },
+                {
+                  "id": "chocolate-lava-cake",
+                  "title": "Chocolate Lava Cake",
+                  "text": "A rich chocolate delight with a warm, gooey center you’ll love.",
+                  "image": "/images/menu-cake.webp",
+                  "imageAlt": "Chocolate lava cake with a strawberry, blueberry and mint"
+                }
+              ]
+            }
+          }
+        },
+        "Why": {
+          "variants": {
+            "RestaurantWhy1": {
+              "id": "why-us",
+              "label": "Why Choose Us",
+              "titleTop": "A Dining Experience",
+              "titleAccent": "Like No Other",
+              "description": "More than just a meal — we bring together great food, inviting ambiance,\nand exceptional service to make every visit special.",
+              "features": [
+                {
+                  "id": "expert-chefs",
+                  "icon": { "src": "/images/icon-chef-hat.webp", "width": 110, "height": 100 },
+                  "title": "Expert Chefs",
+                  "text": "Our skilled chefs craft every dish with passion, experience, and finest ingredients."
+                },
+                {
+                  "id": "fresh-ingredients",
+                  "icon": { "src": "/images/icon-fresh-leaf.webp", "width": 112, "height": 92 },
+                  "title": "Fresh Ingredients",
+                  "text": "We use locally sourced, high-quality ingredients for rich, authentic flavors."
+                },
+                {
+                  "id": "warm-ambiance",
+                  "icon": { "src": "/images/icon-cutlery.webp", "width": 112, "height": 104 },
+                  "title": "Warm Ambiance",
+                  "text": "A comfortable and stylish space perfect for family meals, gatherings, and special moments."
+                },
+                {
+                  "id": "excellent-service",
+                  "icon": { "src": "/images/icon-cloche.webp", "width": 120, "height": 102 },
+                  "title": "Excellent Service",
+                  "text": "Our friendly and attentive team ensures a smooth and memorable dining experience."
+                }
+              ],
+              "image": "/images/feature-food.webp",
+              "imageAlt": "Grilled chicken with roasted potatoes and cherry tomatoes on a black plate"
+            }
+          }
+        },
+        "Gallery": {
+          "variants": {
+            "RestaurantGallery1": {
+              "id": "gallery",
+              "label": "Our Gallery",
+              "titleTop": "A Glimpse of Our",
+              "titleAccent": "Restaurant",
+              "description": "Explore our food, ambience, and dining experience through our gallery.",
+              "items": [
+                { "id": "grilled-salmon", "title": "Grilled Salmon", "image": "/images/gallery-salmon.webp" },
+                { "id": "dining-hall", "title": "Our Dining Hall", "image": "/images/gallery-interior.webp" },
+                { "id": "penne-arrabbiata", "title": "Penne Arrabbiata", "image": "/images/gallery-pasta.webp" },
+                { "id": "lava-cake", "title": "Chocolate Lava Cake", "image": "/images/gallery-dessert.webp" },
+                { "id": "orange-cooler", "title": "Orange Cooler", "image": "/images/gallery-drink.webp" },
+                { "id": "cozy-booths", "title": "Cozy Booths", "image": "/images/gallery-dining.webp" }
+              ],
+              "viewerLabel": "Photo viewer",
+              "openLabel": "Open photo: {title}",
+              "closeLabel": "Close",
+              "previousLabel": "Previous photo",
+              "nextLabel": "Next photo"
+            }
+          }
+        },
+        "Testimonials": {
+          "variants": {
+            "RestaurantTestimonials1": {
+              "id": "testimonials",
+              "label": "Testimonials",
+              "titleTop": "What Our Guests Say",
+              "titleAccent": "About Us",
+              "description": "Hear from our valued guests who have experienced the taste, service,\nand hospitality at TASTERA.",
+              "rating": 5,
+              "ratingLabel": "Rated {rating} out of 5",
+              "previousLabel": "Previous review",
+              "nextLabel": "Next review",
+              "showLabel": "Show the review by {name}",
+              "startIndex": 1,
+              "items": [
+                {
+                  "id": "rahul-mehta",
+                  "name": "Rahul Mehta",
+                  "role": "Food Enthusiast",
+                  "quote": "The food was absolutely delicious and the service was excellent. A perfect place for family dining!",
+                  "image": "/images/guest-rahul-mehta.webp"
+                },
+                {
+                  "id": "priya-sharma",
+                  "name": "Priya Sharma",
+                  "role": "Regular Guest",
+                  "quote": "Amazing ambiance, great food, and a warm, welcoming staff. TASTERA is now our go-to restaurant!",
+                  "image": "/images/guest-priya-sharma.webp"
+                },
+                {
+                  "id": "aman-verma",
+                  "name": "Aman Verma",
+                  "role": "Corporate Client",
+                  "quote": "A wonderful dining experience! The flavors, presentation, and hospitality were truly outstanding.",
+                  "image": "/images/guest-aman-verma.webp"
+                }
+              ],
+              "decoImage": { "src": "/images/deco-hat-testimonials.webp", "width": 270, "height": 200 }
+            }
+          }
+        },
+        "Contact": {
+          "variants": {
+            "RestaurantContact1": {
+              "id": "contact",
+              "label": "Contact & Reservation",
+              "titleTop": "Reach Out &",
+              "titleAccent": "Reserve Your Table",
+              "description": "Have a question or planning a visit? Get in touch with us or book your table in advance.",
+              "infoTitle": "Get in Touch",
+              "infoText": "We’re always happy to help! Contact us for reservations, inquiries, or any assistance.",
+              "image": "/images/reservation-interior.webp",
+              "imageAlt": "A plated dish by candlelight on a marble table in the Tastera dining room",
+              "formId": "reservation",
+              "formTitle": "Book a Table",
+              "formText": "Reserve your table and enjoy an exceptional dining experience.",
+              "formIcon": { "src": "/images/icon-book-table.webp", "width": 130, "height": 108 },
+              "decoImage": { "src": "/images/deco-cutlery.webp", "width": 144, "height": 180 }
+            }
+          }
+        },
+        "ContactForm": {
+          "variants": {
+            "RestaurantContactForm1": {
+              "fields": {
+                "name": { "placeholder": "Your Name", "icon": "LuUser" },
+                "phone": { "placeholder": "Phone Number", "icon": "LuPhone" },
+                "email": { "placeholder": "Email Address", "icon": "LuMail" },
+                "date": { "placeholder": "Select Date", "icon": "LuCalendarDays" },
+                "time": { "placeholder": "Select Time", "icon": "LuClock3" },
+                "guests": { "placeholder": "No. of Guests", "icon": "LuUsers" }
+              },
+              "timeOptions": ["12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "7:00 PM", "8:00 PM", "9:00 PM", "10:00 PM"],
+              "guestOptions": ["1 Guest", "2 Guests", "3 Guests", "4 Guests", "5 Guests", "6 Guests", "7–10 Guests", "10+ Guests"],
+              "button": "Reserve Your Table",
+              "sending": "Reserving…",
+              "successTitle": "Thank you, {name}!",
+              "success": "Your table request is in. We’ll call you shortly to confirm it.",
+              "closeLabel": "Close message"
+            }
+          }
+        },
+        "Faq": {
+          "variants": {
+            "RestaurantFaq1": {
+              "id": "faq",
+              "label": "FAQs",
+              "titleTop": "Frequently Asked",
+              "titleAccent": "Questions",
+              "description": "Find quick answers to common queries about our restaurant, reservations, menu, and services.",
+              "image": "/images/faq-food.webp",
+              "imageAlt": "Grilled steak with rosemary, cherry tomatoes and roasted potatoes",
+              "items": [
+                {
+                  "id": "reservation",
+                  "question": "Do I need a reservation to dine at your restaurant?",
+                  "answer": "Reservations are recommended, especially on weekends and during peak hours, to ensure your preferred table and a seamless dining experience."
+                },
+                {
+                  "id": "cuisine",
+                  "question": "What type of cuisine do you serve?",
+                  "answer": "We are a multi-cuisine restaurant: Indian favourites, continental grills, pastas, burgers and desserts, all freshly prepared by our chefs."
+                },
+                {
+                  "id": "diet-options",
+                  "question": "Do you offer vegetarian and special diet options?",
+                  "answer": "Yes. Our menu has plenty of vegetarian dishes, and our team is happy to adapt meals for vegan, gluten-free or other dietary needs."
+                },
+                {
+                  "id": "parking",
+                  "question": "Is there parking available at the restaurant?",
+                  "answer": "Yes, free parking is available for our guests right next to the restaurant."
+                },
+                {
+                  "id": "private-events",
+                  "question": "Can I host a private event or party at your restaurant?",
+                  "answer": "Absolutely. We host birthdays, family get-togethers and corporate dinners. Contact us and we will plan the menu and seating with you."
+                }
+              ],
+              "decoImage": { "src": "/images/deco-leaf.webp", "width": 224, "height": 236 }
+            }
+          }
+        }
+      },
+      "templateComponents": {
+        "template-1": {
+          "shared": {
+            "Header": "RestaurantHeader1",
+            "Footer": "Footer"
+          },
+          "pages": {
+            "home": {
+              "components": [
+                { "key": "Hero", "component": "RestaurantHero1" },
+                { "key": "About", "component": "RestaurantAbout1" },
+                { "key": "Menus", "component": "RestaurantMenus1" },
+                { "key": "Why", "component": "RestaurantWhy1" },
+                { "key": "Gallery", "component": "RestaurantGallery1" },
+                { "key": "Testimonials", "component": "RestaurantTestimonials1" },
+                { "key": "Contact", "component": "RestaurantContact1" },
+                { "key": "Faq", "component": "RestaurantFaq1" }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
