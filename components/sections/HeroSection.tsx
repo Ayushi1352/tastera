@@ -2,6 +2,28 @@ import Image from "next/image";
 import type { HeroData } from "@/types/templates.types";
 import { Icon } from "@/components/ui/Icon";
 import { buttonArrow, buttonClass } from "@/components/ui/buttonStyles";
+import { ChefHatArt } from "@/components/ui/LineArt";
+
+/** Line drawings over the dark side of the photo (desktop only): an orange chef's hat above the kicker, and a fork and knife leaning in from the left edge */
+const HeroDecor = () => (
+  <>
+    <ChefHatArt className="pointer-events-none absolute left-[6.5625rem] top-[5.875rem] -z-10 hidden w-[9.625rem] text-[var(--color-hero-accent)] opacity-75 lg:block" />
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 120 420"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.5"
+      strokeLinejoin="round"
+      className="pointer-events-none absolute left-0 top-[20rem] -z-10 hidden h-[26.25rem] w-[7.5rem] text-[var(--color-white)] opacity-35 lg:block"
+    >
+      {/* fork: four tines, neck, handle */}
+      <path vectorEffect="non-scaling-stroke" transform="translate(14 0) rotate(21) scale(1.4)" d="M0 6a4 4 0 0 1 8 0V70h6V6a4 4 0 0 1 8 0V70h6V6a4 4 0 0 1 8 0V70h6V6a4 4 0 0 1 8 0V86q0 22-16 30V300a6 6 0 0 1-12 0V116Q0 108 0 86Z" />
+      {/* knife: rounded tip, blade edge, handle */}
+      <path vectorEffect="non-scaling-stroke" transform="translate(84 152) rotate(21) scale(1.4)" d="M2 150V22Q2 0 16 1Q26 3 24 34L22 150ZM5 156H21V340a8 8 0 0 1-16 0Z" />
+    </svg>
+  </>
+);
 
 /** Dark slate banner: spaced-out kicker, big serif headline, orange rule, subtitle and button on the left; the plated dish fills the right */
 export const HeroSection = ({ data }: { data?: HeroData }) => {
@@ -16,8 +38,9 @@ export const HeroSection = ({ data }: { data?: HeroData }) => {
         preload
         quality={90}
         sizes="(min-width: 1920px) 1920px, 100vw"
-        className="-z-20 object-cover object-[78%_center] lg:object-center"
+        className="-z-20 object-cover object-[78%_center] lg:object-right"
       />
+      <HeroDecor />
       {/* phones and tablets: the dish sits behind the text, so a dark fade keeps the headline readable */}
       <div aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-r from-[var(--color-black-85)] via-[var(--color-black-60)] to-[var(--color-black-40)] lg:hidden" />
 

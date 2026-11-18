@@ -28,13 +28,6 @@ export interface SiteMetadataData {
   lang: string;
 }
 
-/** A picture cut from the design (icons, line drawings), with its pixel size */
-export interface DecorImage {
-  src: string;
-  width: number;
-  height: number;
-}
-
 export interface LinkItem {
   id: string;
   label: string;
@@ -105,7 +98,8 @@ export interface SectionTitle {
 
 export interface FeatureItem {
   id: string;
-  icon: DecorImage;
+  /** react-icons name, listed in components/ui/Icon.tsx */
+  icon: string;
   title: string;
   text: string;
 }
@@ -126,7 +120,6 @@ export interface AboutData extends SectionTitle {
   features: FeatureItem[];
   image: string;
   imageAlt: string;
-  decoImage: DecorImage;
 }
 
 export interface MenuItem {
@@ -178,7 +171,6 @@ export interface TestimonialsData extends SectionTitle {
   showLabel: string;
   startIndex: number;
   items: TestimonialItem[];
-  decoImage: DecorImage;
 }
 
 export interface ContactData extends SectionTitle {
@@ -190,8 +182,8 @@ export interface ContactData extends SectionTitle {
   formId: string;
   formTitle: string;
   formText: string;
-  formIcon: DecorImage;
-  decoImage: DecorImage;
+  /** react-icons name, listed in components/ui/Icon.tsx */
+  formIcon: string;
 }
 
 export interface FormField {
@@ -227,7 +219,6 @@ export interface FaqData extends SectionTitle {
   image: string;
   imageAlt: string;
   items: FaqItem[];
-  decoImage: DecorImage;
 }
 
 interface Variants<T> {

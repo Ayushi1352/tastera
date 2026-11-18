@@ -2,12 +2,13 @@ import Image from "next/image";
 import type { FeatureItem, WhyData } from "@/types/templates.types";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { sectionSpace } from "@/components/ui/sectionSpace";
+import { Icon } from "@/components/ui/Icon";
 
 /** Icon tile on the left, title and text on the right */
 const Feature = ({ item, delay, className = "" }: { item: FeatureItem; delay: number; className?: string }) => (
   <li data-reveal data-reveal-delay={delay} className={`flex items-start gap-5 lg:gap-[2rem] ${className}`}>
     <span className="grid size-24 shrink-0 place-items-center rounded-2xl bg-[var(--color-bg-tile)] lg:mt-[0.625rem] lg:h-[8.5625rem] lg:w-[9.125rem] lg:rounded-[1.125rem]">
-      <Image src={item.icon.src} alt="" width={item.icon.width} height={item.icon.height} sizes="120px" className="h-auto w-[4.75rem] lg:w-[var(--icon-w)]" style={{ "--icon-w": `${item.icon.width / 16}rem` } as React.CSSProperties} />
+      <Icon name={item.icon} className="size-14 text-[var(--color-primary)] lg:size-[5.25rem]" strokeWidth={1.6} />
     </span>
     <div>
       <h3 className="font-heading text-xl font-bold leading-tight text-[var(--color-heading)] lg:text-[2.231rem] lg:leading-none">{item.title}</h3>

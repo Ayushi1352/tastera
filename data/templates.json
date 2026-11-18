@@ -128,20 +128,19 @@
               "features": [
                 {
                   "id": "quality-food",
-                  "icon": { "src": "/images/icon-chef-tools.webp", "width": 106, "height": 108 },
+                  "icon": "LuCookingPot",
                   "title": "Quality Food",
                   "text": "We use fresh, high-quality ingredients to serve delicious and wholesome meals."
                 },
                 {
                   "id": "sustainable-sourcing",
-                  "icon": { "src": "/images/icon-leaf.webp", "width": 110, "height": 88 },
+                  "icon": "LuSprout",
                   "title": "Sustainable Sourcing",
                   "text": "We responsibly source our ingredients to ensure freshness, taste, and long-term quality."
                 }
               ],
               "image": "/images/about-food.webp",
-              "imageAlt": "Grilled steak with rosemary, roasted potatoes, cherry tomatoes and broccoli",
-              "decoImage": { "src": "/images/deco-hat-about.webp", "width": 168, "height": 270 }
+              "imageAlt": "Grilled steak with rosemary, roasted potatoes, cherry tomatoes and broccoli"
             }
           }
         },
@@ -197,25 +196,25 @@
               "features": [
                 {
                   "id": "expert-chefs",
-                  "icon": { "src": "/images/icon-chef-hat.webp", "width": 110, "height": 100 },
+                  "icon": "LuChefHat",
                   "title": "Expert Chefs",
                   "text": "Our skilled chefs craft every dish with passion, experience, and finest ingredients."
                 },
                 {
                   "id": "fresh-ingredients",
-                  "icon": { "src": "/images/icon-fresh-leaf.webp", "width": 112, "height": 92 },
+                  "icon": "LuLeaf",
                   "title": "Fresh Ingredients",
                   "text": "We use locally sourced, high-quality ingredients for rich, authentic flavors."
                 },
                 {
                   "id": "warm-ambiance",
-                  "icon": { "src": "/images/icon-cutlery.webp", "width": 112, "height": 104 },
+                  "icon": "LuUtensils",
                   "title": "Warm Ambiance",
                   "text": "A comfortable and stylish space perfect for family meals, gatherings, and special moments."
                 },
                 {
                   "id": "excellent-service",
-                  "icon": { "src": "/images/icon-cloche.webp", "width": 120, "height": 102 },
+                  "icon": "LuConciergeBell",
                   "title": "Excellent Service",
                   "text": "Our friendly and attentive team ensures a smooth and memorable dining experience."
                 }
@@ -285,8 +284,7 @@
                   "quote": "A wonderful dining experience! The flavors, presentation, and hospitality were truly outstanding.",
                   "image": "/images/guest-aman-verma.webp"
                 }
-              ],
-              "decoImage": { "src": "/images/deco-hat-testimonials.webp", "width": 270, "height": 200 }
+              ]
             }
           }
         },
@@ -305,8 +303,7 @@
               "formId": "reservation",
               "formTitle": "Book a Table",
               "formText": "Reserve your table and enjoy an exceptional dining experience.",
-              "formIcon": { "src": "/images/icon-book-table.webp", "width": 130, "height": 108 },
-              "decoImage": { "src": "/images/deco-cutlery.webp", "width": 144, "height": 180 }
+              "formIcon": "LuCalendarCheck"
             }
           }
         },
@@ -367,8 +364,7 @@
                   "question": "Can I host a private event or party at your restaurant?",
                   "answer": "Absolutely. We host birthdays, family get-togethers and corporate dinners. Contact us and we will plan the menu and seating with you."
                 }
-              ],
-              "decoImage": { "src": "/images/deco-leaf.webp", "width": 224, "height": 236 }
+              ]
             }
           }
         }

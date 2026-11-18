@@ -3,6 +3,7 @@ import type { FaqData } from "@/types/templates.types";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { FaqAccordion } from "@/components/sections/FaqAccordion";
 import { sectionSpace } from "@/components/ui/sectionSpace";
+import { BasilArt } from "@/components/ui/LineArt";
 
 /** Centred title; the dish photo with a thin orange outline on the left, the questions on the right */
 export const FaqSection = ({ data }: { data?: FaqData }) => {
@@ -11,14 +12,7 @@ export const FaqSection = ({ data }: { data?: FaqData }) => {
   return (
     <section id={data.id} className={`relative isolate scroll-mt-[4.5rem] bg-[var(--color-bg-main)] lg:scroll-mt-[6.5rem] ${sectionSpace}`}>
       {/* faint basil leaves in the bottom right corner */}
-      <Image
-        src={data.decoImage.src}
-        alt=""
-        width={data.decoImage.width}
-        height={data.decoImage.height}
-        sizes="224px"
-        className="pointer-events-none absolute left-[106rem] bottom-[1.3125rem] -z-10 hidden w-[14rem] lg:block"
-      />
+      <BasilArt className="pointer-events-none absolute left-[106rem] bottom-[1.3125rem] -z-10 hidden w-[14rem] text-[var(--color-deco-line)] lg:block" />
       <SectionHeading
         label={data.label}
         titleTop={data.titleTop}

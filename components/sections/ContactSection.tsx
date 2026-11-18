@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { CompanyData, ContactData, ContactFormData } from "@/types/templates.types";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Icon } from "@/components/ui/Icon";
+import { CutleryArt } from "@/components/ui/LineArt";
 import { ReservationForm } from "@/components/sections/ReservationForm";
 import { sectionSpace } from "@/components/ui/sectionSpace";
 
@@ -18,14 +19,7 @@ export const ContactSection = ({ data, form, company }: Props) => {
   return (
     <section id={data.id} className={`relative isolate scroll-mt-[4.5rem] bg-[var(--color-bg-main)] lg:scroll-mt-[6.5rem] ${sectionSpace}`}>
       {/* faint fork and knife drawing beside the title */}
-      <Image
-        src={data.decoImage.src}
-        alt=""
-        width={data.decoImage.width}
-        height={data.decoImage.height}
-        sizes="144px"
-        className="pointer-events-none absolute left-[106rem] top-[5.3375rem] -z-10 hidden w-[9rem] lg:block"
-      />
+      <CutleryArt className="pointer-events-none absolute left-[106rem] top-[5.3375rem] -z-10 hidden w-[9rem] text-[var(--color-deco-line)] lg:block" />
       <SectionHeading
         label={data.label}
         titleTop={data.titleTop}
@@ -91,7 +85,7 @@ export const ContactSection = ({ data, form, company }: Props) => {
           <span aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-b from-[var(--color-black-70)] to-[var(--color-black-85)]" />
 
           <div className="flex items-center gap-4 lg:ml-[0.9375rem] lg:gap-0">
-            <Image src={data.formIcon.src} alt="" width={data.formIcon.width} height={data.formIcon.height} sizes="130px" className="h-auto w-16 shrink-0 lg:w-[8.125rem]" />
+            <Icon name={data.formIcon} className="size-14 shrink-0 text-[var(--color-primary)] lg:size-[6.5rem]" />
             <span aria-hidden="true" className="hidden h-[5.625rem] w-[0.125rem] shrink-0 bg-[var(--color-white-60)] sm:block lg:ml-[1rem]" />
             <div className="lg:ml-[1.875rem]">
               <h3 className="font-heading text-2xl font-bold leading-tight lg:text-[2.5594rem] lg:leading-none">{data.formTitle}</h3>

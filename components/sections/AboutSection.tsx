@@ -1,12 +1,14 @@
 import Image from "next/image";
 import type { AboutData, FeatureItem } from "@/types/templates.types";
 import { sectionSpace } from "@/components/ui/sectionSpace";
+import { Icon } from "@/components/ui/Icon";
+import { ChefHatArt } from "@/components/ui/LineArt";
 
 /** Icon tile, thin divider, then title and text (the two points under the About text) */
 const Feature = ({ item }: { item: FeatureItem }) => (
   <li className="flex items-center gap-5 lg:gap-[2.5625rem]">
     <span className="grid size-24 shrink-0 place-items-center rounded-2xl bg-[var(--color-bg-tile)] lg:h-[8.1875rem] lg:w-[8.5rem] lg:rounded-[1rem]">
-      <Image src={item.icon.src} alt="" width={item.icon.width} height={item.icon.height} sizes="110px" className="h-auto w-[4.75rem] lg:w-[var(--icon-w)]" style={{ "--icon-w": `${item.icon.width / 16}rem` } as React.CSSProperties} />
+      <Icon name={item.icon} className="size-14 text-[var(--color-primary)] lg:size-[5rem]" strokeWidth={1.6} />
     </span>
     <span aria-hidden="true" className="hidden h-[7.125rem] w-[0.1875rem] shrink-0 bg-[var(--color-divider)] sm:block" />
     <div>
@@ -43,14 +45,7 @@ export const AboutSection = ({ data }: { data?: AboutData }) => {
 
         <div data-reveal className="relative bg-[var(--color-white)] p-2.5 shadow-[0_0.75rem_2rem_-0.5rem_var(--color-shadow-photo)] lg:ml-[-0.0625rem] lg:mt-[0.625rem] lg:h-[43.25rem] lg:w-[57rem] lg:p-[0.875rem]">
           {/* faint chef's hat drawing peeking out behind the photo frame */}
-          <Image
-            src={data.decoImage.src}
-            alt=""
-            width={data.decoImage.width}
-            height={data.decoImage.height}
-            sizes="170px"
-            className="pointer-events-none absolute -left-[11.4375rem] -top-[5.1875rem] -z-10 hidden w-[10.5rem] lg:block"
-          />
+          <ChefHatArt className="pointer-events-none absolute -left-[11.4375rem] -top-[5.1875rem] -z-10 hidden w-[10.5rem] text-[var(--color-deco-line)] lg:block" />
           <div className="relative aspect-[885/665] w-full">
             <Image src={data.image} alt={data.imageAlt} fill quality={90} sizes="(min-width: 1024px) 47vw, (min-width: 672px) 640px, 100vw" className="object-cover" />
           </div>

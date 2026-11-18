@@ -53,6 +53,8 @@
   --color-divider-footer: #3c3d41;
   --color-rule-footer: #5d5e61;
   --color-dot: #b4b5b9;
+  /* faint line drawings behind the About, Testimonials, Contact and FAQ sections */
+  --color-deco-line: #dcdcdc;
 
   /* Overlays */
   --color-black-40: rgba(0, 0, 0, 0.4);

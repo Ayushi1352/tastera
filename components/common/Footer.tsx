@@ -9,22 +9,22 @@ async function currentYear() {
   return new Date().getFullYear();
 }
 
-const heading = "font-heading text-[1.5rem] font-bold leading-tight text-[var(--color-white)] lg:text-[1.915rem] lg:leading-none";
-const underline = "mt-3 block h-[0.3125rem] w-[5rem] bg-[var(--color-footer-accent)] lg:mt-[1.275rem] lg:h-[0.375rem]";
+const heading = "font-heading text-lg font-bold sm:text-[1.5rem] leading-tight text-[var(--color-white)] lg:text-[1.915rem] lg:leading-none";
+const underline = "mt-2 block h-1 w-14 sm:mt-3 sm:h-[0.3125rem] sm:w-[5rem] bg-[var(--color-footer-accent)] lg:mt-[1.275rem] lg:h-[0.375rem]";
 const divider = "hidden w-[0.125rem] bg-[var(--color-divider-footer)] lg:mt-[8.1875rem] lg:block lg:h-[17.5rem]";
 
 const LinkList = ({ title, links }: { title: string; links: LinkItem[] }) => (
   <nav aria-label={title}>
     <h2 className={heading}>{title}</h2>
     <span aria-hidden="true" className={underline} />
-    <ul className="mt-4 grid gap-2 lg:mt-[1.1438rem] lg:gap-0">
+    <ul className="mt-3 grid gap-1.5 sm:mt-4 sm:gap-2 lg:mt-[1.1438rem] lg:gap-0">
       {links.map((link) => (
         <li key={link.id}>
           <a
             href={link.url}
-            className="group inline-flex items-center gap-3 text-base text-[var(--color-text-footer)] transition-colors hover:text-[var(--color-footer-accent)] lg:h-[3.4375rem] lg:gap-[1.25rem] lg:pl-[0.4375rem] lg:text-[1.4958rem]"
+            className="group inline-flex items-center gap-1.5 text-sm text-[var(--color-text-footer)] sm:gap-3 sm:text-base transition-colors hover:text-[var(--color-footer-accent)] lg:h-[3.4375rem] lg:gap-[1.25rem] lg:pl-[0.4375rem] lg:text-[1.4958rem]"
           >
-            <Icon name="LuChevronRight" className="size-4 text-[var(--color-footer-accent)] transition-transform group-hover:translate-x-0.5 lg:size-[1.4375rem]" strokeWidth={3} />
+            <Icon name="LuChevronRight" className="size-3.5 shrink-0 sm:size-4 text-[var(--color-footer-accent)] transition-transform group-hover:translate-x-0.5 lg:size-[1.4375rem]" strokeWidth={3} />
             {link.label}
           </a>
         </li>
@@ -42,9 +42,9 @@ export const Footer = async ({ data, company }: { data?: FooterData; company: Co
 
   return (
     <footer className="bg-gradient-to-b from-[var(--color-bg-footer-top)] to-[var(--color-bg-footer)] to-[23%] text-[var(--color-white)]">
-      <div className="grid gap-10 px-4 pb-10 pt-12 sm:grid-cols-2 sm:px-6 lg:h-[32.1875rem] lg:grid-cols-[29.5625rem_0.125rem_20.25rem_0.125rem_21.6875rem_0.125rem_1fr] lg:gap-0 lg:p-0 lg:pl-[10.1875rem]">
-        {/* brand */}
-        <div className="lg:pt-[5.1875rem]">
+      <div className="grid grid-cols-2 gap-x-4 gap-y-8 px-4 pb-8 pt-10 sm:gap-10 sm:pb-10 sm:pt-12 sm:px-6 lg:h-[32.1875rem] lg:grid-cols-[29.5625rem_0.125rem_20.25rem_0.125rem_21.6875rem_0.125rem_1fr] lg:gap-0 lg:p-0 lg:pl-[10.1875rem]">
+        {/* brand; on phones it and the contact details take the full width, with the two link lists side by side between them */}
+        <div className="col-span-2 sm:col-span-1 lg:pt-[5.1875rem]">
           {company.logoLight ? (
             <Image src={company.logoLight} alt={company.logoAlt} width={company.logoWidth} height={company.logoHeight} quality={90} sizes="(min-width: 1024px) 18vw, 220px" className="h-auto w-[13.75rem] lg:ml-[0.3125rem] lg:w-[21.5625rem]" />
           ) : (
@@ -80,7 +80,7 @@ export const Footer = async ({ data, company }: { data?: FooterData; company: Co
 
         <span aria-hidden="true" className={divider} />
         {/* contact details */}
-        <div className="lg:pl-[3.8125rem] lg:pt-[7.875rem]">
+        <div className="col-span-2 sm:col-span-1 lg:pl-[3.8125rem] lg:pt-[7.875rem]">
           <h2 className={heading}>{data.contactTitle}</h2>
           <span aria-hidden="true" className={underline} />
           <ul className="mt-5 grid gap-4 lg:ml-[0.5625rem] lg:mt-[2.3125rem] lg:gap-[1.4375rem]">
