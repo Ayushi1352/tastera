@@ -15,12 +15,13 @@ type EyebrowProps = {
 
 /** Small orange uppercase label between thin orange lines, above the section titles */
 export const Eyebrow = ({ label, lines = "both", className = "", lineClass = "w-12 lg:w-[7.9375rem]" }: EyebrowProps) => {
-  const line = <span aria-hidden="true" className={`h-[0.125rem] shrink-0 rounded-full bg-current lg:h-[0.1875rem] ${lineClass}`} />;
+  // the label always stays on one line; on very narrow phones the lines get shorter instead
+  const line = <span aria-hidden="true" className={`h-[0.125rem] min-w-4 shrink rounded-full bg-current lg:h-[0.1875rem] ${lineClass}`} />;
 
   return (
     <p className={`flex items-center gap-3 font-heading font-bold uppercase leading-none text-[var(--color-primary)] lg:gap-[2.0625rem] ${lines === "both" ? "justify-center" : ""} ${className}`}>
       {lines === "both" && line}
-      <span>{label}</span>
+      <span className="whitespace-nowrap">{label}</span>
       {line}
     </p>
   );
@@ -29,12 +30,19 @@ export const Eyebrow = ({ label, lines = "both", className = "", lineClass = "w-
 /** Bold sans title; the accent words in the brand orange */
 export const titleClass = "font-heading font-bold leading-[1.15] tracking-[-0.005em] text-[var(--color-heading)] lg:leading-none";
 
+/**
+  Phone and tablet size of every section title (the desktop size comes from each section).
+  It shrinks with narrow phones (24px at 300px, full 34px from ~425px) and the lines are balanced,
+  so no title takes more than two lines on any phone or tablet.
+*/
+export const titleSizeClass = "text-[clamp(1.5rem,8vw,2.125rem)] text-balance sm:text-[2.75rem]";
+
 type HeadingProps = {
   label: string;
   titleTop: string;
   titleAccent: string;
   description?: string;
-  /** label size and its lines (the design draws them a little differently in every section) */
+  /** desktop label size and its lines (the design draws them a little differently in every section; phones and tablets use one size) */
   labelClass?: string;
   lineClass?: string;
   /** desktop title size and its distance from the label */
@@ -50,15 +58,15 @@ export const SectionHeading = ({
   titleTop,
   titleAccent,
   description,
-  labelClass = "text-lg lg:text-[2.0406rem]",
+  labelClass = "lg:text-[2.0406rem]",
   lineClass,
   titleClass: sizeClass = "lg:mt-[1.6125rem] lg:text-[4.225rem]",
   descriptionClass = "font-accent lg:mt-[1.1rem] lg:text-[1.8647rem] lg:leading-[2.5625rem]",
   className = "",
 }: HeadingProps) => (
   <div data-reveal className={`px-4 text-center sm:px-6 lg:px-0 ${className}`}>
-    <Eyebrow label={label} className={labelClass} lineClass={lineClass} />
-    <h2 className={`mt-3 text-[2.125rem] sm:text-[2.75rem] ${titleClass} ${sizeClass}`}>
+    <Eyebrow label={label} className={`text-base sm:text-lg ${labelClass}`} lineClass={lineClass} />
+    <h2 className={`mt-3 ${titleSizeClass} ${titleClass} ${sizeClass}`}>
       {titleTop} <span className="text-[var(--color-primary)]">{titleAccent}</span>
     </h2>
     {description && (

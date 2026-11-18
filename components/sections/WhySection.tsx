@@ -38,7 +38,7 @@ export const WhySection = ({ data }: { data?: WhyData }) => {
         titleTop={data.titleTop}
         titleAccent={data.titleAccent}
         description={data.description}
-        labelClass="text-lg lg:text-[1.8516rem]"
+        labelClass="lg:text-[1.8516rem]"
         lineClass="w-12 lg:w-[6.125rem]"
         titleClass="lg:mt-[1.1813rem] lg:text-[3.8531rem]"
         descriptionClass="font-accent lg:mt-[1.1125rem] lg:text-[1.8647rem] lg:leading-[2.5625rem]"

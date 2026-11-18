@@ -14,7 +14,7 @@ export const GallerySection = ({ data }: { data?: GalleryData }) => {
         titleTop={data.titleTop}
         titleAccent={data.titleAccent}
         description={data.description}
-        labelClass="text-lg lg:text-[1.801rem]"
+        labelClass="lg:text-[1.801rem]"
         lineClass="w-12 lg:w-[7.5rem]"
         titleClass="lg:mt-[1.275rem] lg:text-[3.9857rem]"
         descriptionClass="font-accent lg:mt-[1.1688rem] lg:text-[1.8271rem] lg:leading-[2.5625rem]"

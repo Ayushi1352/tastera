@@ -25,13 +25,13 @@ export const ContactSection = ({ data, form, company }: Props) => {
         titleTop={data.titleTop}
         titleAccent={data.titleAccent}
         description={data.description}
-        labelClass="text-base lg:text-[1.7491rem]"
-        lineClass="w-10 lg:w-[6.5625rem]"
+        labelClass="lg:text-[1.7491rem]"
+        lineClass="w-12 lg:w-[6.5625rem]"
         titleClass="lg:mt-[1.025rem] lg:text-[3.7428rem]"
         descriptionClass="font-accent text-[var(--color-text-dark)] lg:mt-[0.8063rem] lg:text-[1.7471rem] lg:leading-[2.5625rem]"
       />
 
-      <div id={data.formId} className="mx-auto mt-12 grid max-w-2xl scroll-mt-[4.5rem] gap-12 px-4 sm:px-6 lg:mt-[3.0125rem] lg:h-[38.375rem] lg:max-w-none lg:scroll-mt-[8rem] lg:grid-cols-[31.0625rem_29.5625rem_52.25rem] lg:gap-0 lg:pl-[3.75rem] lg:pr-0">
+      <div id={data.formId} className="mx-auto mt-10 grid max-w-2xl scroll-mt-[4.5rem] gap-12 px-4 sm:px-6 lg:mt-[3.0125rem] lg:h-[38.375rem] lg:max-w-none lg:scroll-mt-[8rem] lg:grid-cols-[31.0625rem_29.5625rem_52.25rem] lg:gap-0 lg:pl-[3.75rem] lg:pr-0">
         {/* contact details */}
         <div data-reveal className="relative pl-6 lg:pl-[3.1875rem] lg:pt-[0.975rem]">
           <span aria-hidden="true" className="absolute left-0 top-1 h-[calc(100%-0.5rem)] w-1 bg-[var(--color-primary-strong)] lg:top-[1.375rem] lg:h-[32.3125rem] lg:w-[0.375rem]" />

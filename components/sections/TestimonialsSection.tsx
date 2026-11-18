@@ -17,7 +17,7 @@ export const TestimonialsSection = ({ data }: { data?: TestimonialsData }) => {
         titleTop={data.titleTop}
         titleAccent={data.titleAccent}
         description={data.description}
-        labelClass="text-lg lg:text-[1.9671rem]"
+        labelClass="lg:text-[1.9671rem]"
         lineClass="w-12 lg:w-[7.125rem]"
         titleClass="lg:mt-[1.2563rem] lg:text-[3.9629rem]"
         descriptionClass="font-accent lg:mt-[1.0875rem] lg:text-[1.8755rem] lg:leading-[2.5625rem]"

@@ -47,8 +47,8 @@ export const HeroSection = ({ data }: { data?: HeroData }) => {
       <div className="w-full px-4 py-16 sm:px-6 lg:px-0 lg:py-0 lg:pl-[10.5rem] lg:pt-[13.1375rem]">
         <p className="font-heading text-xs font-medium uppercase leading-none tracking-[0.45em] text-[var(--color-white)] sm:text-base lg:text-[1.875rem] lg:tracking-[0.546em]">{data.kicker}</p>
         <h1 className="mt-4 font-display font-bold uppercase leading-none lg:mt-[0.2938rem]">
-          <span className="block text-[3.25rem] text-[var(--color-white)] sm:text-[4.75rem] lg:text-[7.5625rem]">{data.titleTop}</span>
-          <span className="mt-1 block text-[4.25rem] text-[var(--color-hero-accent)] sm:text-[6rem] lg:-mt-[1.1938rem] lg:text-[9.6875rem]">{data.titleAccent}</span>
+          <span className="block text-[clamp(2.5rem,13.5vw,3.25rem)] text-[var(--color-white)] sm:text-[4.75rem] lg:text-[7.5625rem]">{data.titleTop}</span>
+          <span className="mt-1 block text-[clamp(3.25rem,17.5vw,4.25rem)] text-[var(--color-hero-accent)] sm:text-[6rem] lg:-mt-[1.1938rem] lg:text-[9.6875rem]">{data.titleAccent}</span>
         </h1>
         <span aria-hidden="true" className="mt-5 block h-[0.3125rem] w-20 bg-[var(--color-hero-accent)] lg:mt-[1.7rem] lg:h-[0.4375rem] lg:w-[7.9375rem]" />
         <p className="mt-6 font-heading text-xs font-medium uppercase leading-none tracking-[0.35em] text-[var(--color-white)] sm:text-sm lg:mt-[2.4375rem] lg:text-[1.5625rem] lg:tracking-[0.415em]">{data.subtitle}</p>

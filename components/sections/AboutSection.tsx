@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { AboutData, FeatureItem } from "@/types/templates.types";
 import { sectionSpace } from "@/components/ui/sectionSpace";
+import { titleSizeClass } from "@/components/ui/SectionHeading";
 import { Icon } from "@/components/ui/Icon";
 import { ChefHatArt } from "@/components/ui/LineArt";
 
@@ -32,7 +33,7 @@ export const AboutSection = ({ data }: { data?: AboutData }) => {
             </span>
             <span aria-hidden="true" className="h-[0.1875rem] w-16 bg-[var(--color-primary)] lg:h-[0.25rem] lg:w-[6.875rem]" />
           </p>
-          <h2 className="mt-5 font-heading text-[2.375rem] font-bold leading-[1.12] text-[var(--color-heading)] sm:text-5xl lg:mt-[1.5188rem] lg:text-[4.2712rem] lg:leading-[4.75rem]">
+          <h2 className={`mt-5 font-heading font-bold leading-[1.12] text-[var(--color-heading)] ${titleSizeClass} lg:mt-[1.5188rem] lg:text-[4.2712rem] lg:leading-[4.75rem]`}>
             {data.titleTop} <span className="block text-[var(--color-primary)]">{data.titleAccent}</span>
           </h2>
           <p className="mt-5 text-base leading-relaxed text-[var(--color-text-soft)] sm:text-lg lg:mt-[2.0438rem] lg:max-w-[49.5rem] lg:text-[1.6015rem] lg:leading-[2.3125rem]">{data.description}</p>
