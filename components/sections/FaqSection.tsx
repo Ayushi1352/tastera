@@ -25,12 +25,14 @@ export const FaqSection = ({ data }: { data?: FaqData }) => {
       />
 
       <div className="mx-auto mt-10 grid max-w-2xl gap-12 px-4 sm:px-6 lg:mt-[3.45rem] lg:max-w-none lg:grid-cols-[32.375rem_70.25rem] lg:gap-[3.75rem] lg:pl-[6.875rem] lg:pr-0">
-        <div data-reveal className="relative mx-auto w-full max-w-[32.375rem] pl-3 lg:max-w-none lg:pl-0">
-          <svg aria-hidden="true" viewBox="0 0 532 615" className="pointer-events-none absolute left-0 top-[-0.75rem] h-[calc(100%+1.5rem)] w-[calc(100%+0.9375rem)] -translate-x-[0.9375rem] overflow-visible text-[var(--color-primary)] max-lg:hidden" preserveAspectRatio="none">
-            <path d="M110 1.5H70A68.5 68.5 0 0 0 1.5 70V545A68.5 68.5 0 0 0 70 613.5H475" fill="none" stroke="currentColor" strokeWidth="3" />
-          </svg>
-          <div className="relative aspect-[518/590] overflow-hidden rounded-[2rem] lg:rounded-[3.125rem]">
-            <Image src={data.image} alt={data.imageAlt} fill quality={90} sizes="(min-width: 1024px) 27vw, 518px" className="object-cover" />
+        <div data-reveal className="mx-auto w-full max-w-[32.375rem] py-3 pl-3 lg:max-w-none lg:p-0">
+          <div className="relative">
+            {/* thin orange outline an even gap outside the photo: a short top line, the rounded left side, and a longer bottom line */}
+            <span aria-hidden="true" className="pointer-events-none absolute -bottom-3 -left-3 -top-3 w-[6.75rem] rounded-l-[2.75rem] border-y-[0.1875rem] border-l-[0.1875rem] border-[var(--color-primary)] lg:rounded-l-[3.875rem]" />
+            <span aria-hidden="true" className="pointer-events-none absolute -bottom-3 left-[6rem] right-[11%] h-[0.1875rem] bg-[var(--color-primary)]" />
+            <div className="relative aspect-[518/590] overflow-hidden rounded-[2rem] lg:rounded-[3.125rem]">
+              <Image src={data.image} alt={data.imageAlt} fill quality={90} sizes="(min-width: 1024px) 27vw, 518px" className="object-cover" />
+            </div>
           </div>
         </div>
         <div className="lg:pt-[0.375rem]">

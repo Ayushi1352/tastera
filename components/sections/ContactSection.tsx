@@ -69,14 +69,14 @@ export const ContactSection = ({ data, form, company }: Props) => {
           </ul>
         </div>
 
-        {/* dining-room photo with a thin orange outline along its top, right side and bottom */}
-        <div data-reveal className="relative z-10 max-lg:mx-auto max-lg:w-full max-lg:max-w-[29.5625rem]">
-          <div className="relative aspect-[473/602] overflow-hidden rounded-br-[4.375rem] rounded-tl-[6.625rem] lg:aspect-auto lg:h-[37.625rem]">
+        {/* dining-room photo, as tall as the booking panel, with a thin orange outline an even gap outside its top, right side and bottom */}
+        <div data-reveal className="relative z-10 max-lg:mx-auto max-lg:w-full max-lg:max-w-[29.5625rem] lg:mt-[0.4375rem] lg:h-[36.25rem]">
+          <div className="relative aspect-[473/602] overflow-hidden rounded-br-[4.375rem] rounded-tl-[6.625rem] lg:aspect-auto lg:h-full">
             <Image src={data.image} alt={data.imageAlt} fill quality={90} sizes="(min-width: 1024px) 25vw, 473px" className="object-cover" />
           </div>
-          <svg aria-hidden="true" viewBox="0 0 485 614" preserveAspectRatio="none" className="pointer-events-none absolute left-0 top-[-0.0625rem] h-[calc(100%+0.75rem)] w-[calc(100%+0.75rem)] overflow-visible text-[var(--color-primary)]">
-            <path d="M104 1.5H482.5V532.5a80 80 0 0 1-80 80H0" fill="none" stroke="currentColor" strokeWidth="3" />
-          </svg>
+          {/* right side and rounded bottom corner, then the top line, which starts where the top-left curve ends */}
+          <span aria-hidden="true" className="pointer-events-none absolute -bottom-3 -right-3 -top-3 left-0 rounded-br-[5.125rem] border-b-[0.1875rem] border-r-[0.1875rem] border-[var(--color-primary)]" />
+          <span aria-hidden="true" className="pointer-events-none absolute -right-3 -top-3 left-[6.625rem] h-[0.1875rem] bg-[var(--color-primary)]" />
         </div>
 
         {/* booking panel: the dining room, blurred and darkened, behind the form */}

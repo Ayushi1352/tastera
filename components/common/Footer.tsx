@@ -46,7 +46,7 @@ export const Footer = async ({ data, company }: { data?: FooterData; company: Co
         {/* brand; on phones it and the contact details take the full width, with the two link lists side by side between them */}
         <div className="col-span-2 sm:col-span-1 lg:pt-[5.1875rem]">
           {company.logoLight ? (
-            <Image src={company.logoLight} alt={company.logoAlt} width={company.logoWidth} height={company.logoHeight} quality={90} sizes="(min-width: 1024px) 18vw, 220px" className="h-auto w-[13.75rem] lg:ml-[0.3125rem] lg:w-[21.5625rem]" />
+            <Image src={company.logoLight} alt={company.logoAlt} width={company.logoWidth} height={company.logoHeight} quality={90} sizes="(min-width: 1024px) 18vw, 220px" className="h-auto w-[10rem] sm:w-[13.75rem] lg:ml-[0.3125rem] lg:w-[21.5625rem]" />
           ) : (
             <p className="font-display text-3xl lg:ml-[0.3125rem] lg:text-[3rem]">{company.name}</p>
           )}
@@ -93,9 +93,9 @@ export const Footer = async ({ data, company }: { data?: FooterData; company: Co
                     target={external ? "_blank" : undefined}
                     rel={external ? "noopener noreferrer" : undefined}
                     aria-label={`${item.title}: ${item.lines.join(" ")}`}
-                    className="group flex items-center gap-4 text-base text-[var(--color-text-footer)] transition-colors hover:text-[var(--color-white)] lg:gap-[1.75rem] lg:text-[1.4594rem] lg:leading-[2.0625rem]"
+                    className="flex items-center gap-4 text-base text-[var(--color-white)] transition-colors hover:text-[var(--color-footer-accent)] lg:gap-[1.75rem] lg:text-[1.4594rem] lg:leading-[2.0625rem]"
                   >
-                    <span className="grid size-11 shrink-0 place-items-center rounded-lg bg-[var(--color-footer-tile)] text-[var(--color-white)] transition-colors group-hover:bg-[var(--color-footer-accent)] lg:h-[3.5625rem] lg:w-[3.75rem] lg:rounded-[0.5rem]">
+                    <span className="grid size-11 shrink-0 place-items-center rounded-lg bg-[var(--color-footer-tile)] text-[var(--color-footer-accent)] lg:h-[3.5625rem] lg:w-[3.75rem] lg:rounded-[0.5rem]">
                       <Icon name={item.icon} className="size-5 lg:size-[1.875rem]" strokeWidth={1.8} />
                     </span>
                     <span>
