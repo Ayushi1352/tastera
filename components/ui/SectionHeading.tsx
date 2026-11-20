@@ -5,8 +5,6 @@
 
 type EyebrowProps = {
   label: string;
-  /** "both": a line on each side (centred headings); "after": one line after the label */
-  lines?: "both" | "after";
   /** size of this section's label */
   className?: string;
   /** length of the lines (and their distance from the label) */
@@ -14,13 +12,13 @@ type EyebrowProps = {
 };
 
 /** Small orange uppercase label between thin orange lines, above the section titles */
-export const Eyebrow = ({ label, lines = "both", className = "", lineClass = "w-12 lg:w-[7.9375rem]" }: EyebrowProps) => {
+const Eyebrow = ({ label, className = "", lineClass = "w-12 lg:w-[7.9375rem]" }: EyebrowProps) => {
   // the label always stays on one line; on very narrow phones the lines get shorter instead
   const line = <span aria-hidden="true" className={`h-[0.125rem] min-w-4 shrink rounded-full bg-current lg:h-[0.1875rem] ${lineClass}`} />;
 
   return (
-    <p className={`flex items-center gap-3 font-heading font-bold uppercase leading-none text-[var(--color-primary)] lg:gap-[2.0625rem] ${lines === "both" ? "justify-center" : ""} ${className}`}>
-      {lines === "both" && line}
+    <p className={`flex items-center justify-center gap-3 font-heading font-bold uppercase leading-none text-[var(--color-primary)] lg:gap-[2.0625rem] ${className}`}>
+      {line}
       <span className="whitespace-nowrap">{label}</span>
       {line}
     </p>
