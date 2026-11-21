@@ -69,14 +69,13 @@ export const ContactSection = ({ data, form, company }: Props) => {
           </ul>
         </div>
 
-        {/* dining-room photo, as tall as the booking panel, with a thin orange outline an even gap outside its top, right side and bottom */}
+        {/* dining-room photo, as tall as the booking panel, with a thin orange outline an even gap outside it on all four sides */}
         <div data-reveal className="relative z-10 max-lg:mx-auto max-lg:w-full max-lg:max-w-[29.5625rem] lg:mt-[0.4375rem] lg:h-[36.25rem]">
           <div className="relative aspect-[473/602] overflow-hidden rounded-br-[4.375rem] rounded-tl-[6.625rem] lg:aspect-auto lg:h-full">
             <Image src={data.image} alt={data.imageAlt} fill quality={90} sizes="(min-width: 1024px) 25vw, 473px" className="object-cover" />
           </div>
-          {/* right side and rounded bottom corner, then the top line, which starts where the top-left curve ends */}
-          <span aria-hidden="true" className="pointer-events-none absolute -bottom-3 -right-3 -top-3 left-0 rounded-br-[5.125rem] border-b-[0.1875rem] border-r-[0.1875rem] border-[var(--color-primary)]" />
-          <span aria-hidden="true" className="pointer-events-none absolute -right-3 -top-3 left-[6.625rem] h-[0.1875rem] bg-[var(--color-primary)]" />
+          {/* outline on all four sides, its rounded corners following the photo's */}
+          <span aria-hidden="true" className="pointer-events-none absolute -inset-3 rounded-br-[5.125rem] rounded-tl-[7.375rem] border-[0.1875rem] border-[var(--color-primary)]" />
         </div>
 
         {/* booking panel: the dining room, blurred and darkened, behind the form */}
